@@ -85,9 +85,13 @@ class _CovidState extends State<Covid> {
               child: Row(
                 children: <Widget>[
                   Icon(Icons.location_city, color: Colors.black),
+                  SizedBox(
+                    width: 20,
+                  ),
                   Expanded(
                       child: DropdownButton(
-                        isExpanded: true,
+                    isExpanded: true,
+                    underline: SizedBox(),
                     items: ['India', 'America', 'France']
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
