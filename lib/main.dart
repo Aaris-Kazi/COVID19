@@ -75,16 +75,30 @@ class _CovidState extends State<Covid> {
                 ),
               )),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20.0),
-            height: 60,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: new BorderRadius.circular(25),
-                border: Border.all(color: Color(0xFFE5E5E5))),
-            child: Icon(Icons.location_city, color: Colors.black),
-            padding: EdgeInsets.only(right: 530),
-          )
+              margin: EdgeInsets.symmetric(horizontal: 20.0),
+              height: 60,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.circular(25),
+                  border: Border.all(color: Color(0xFFE5E5E5))),
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.location_city, color: Colors.black),
+                  Expanded(
+                      child: DropdownButton(
+                        isExpanded: true,
+                    items: ['India', 'America', 'France']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        child: new Text(value),
+                        value: value,
+                      );
+                    }).toList(),
+                    onChanged: (value) {},
+                  ))
+                ],
+              ))
         ],
       ),
     );
