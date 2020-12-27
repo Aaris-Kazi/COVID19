@@ -102,7 +102,21 @@ class _CovidState extends State<Covid> {
                     onChanged: (value) {},
                   ))
                 ],
-              ))
+              )),
+              Padding(padding: EdgeInsets.only(top: 50),
+              child: Column(children: <Widget>[
+                Text.rich(
+                  TextSpan(children: [
+                    TextSpan(
+                    text: 'Case Update'
+                  ),
+                  TextSpan(
+                    text: 'Case Update'
+                  )
+                  ])
+                )
+              ],),
+              )
         ],
       ),
     );
