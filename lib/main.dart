@@ -79,7 +79,7 @@ class _CovidState extends State<Covid> {
               height: 60,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.blue,
                   borderRadius: new BorderRadius.circular(25),
                   border: Border.all(color: Color(0xFFE5E5E5))),
               child: Row(
@@ -103,20 +103,17 @@ class _CovidState extends State<Covid> {
                   ))
                 ],
               )),
-              Padding(padding: EdgeInsets.only(top: 50),
-              child: Column(children: <Widget>[
-                Text.rich(
-                  TextSpan(children: [
-                    TextSpan(
-                    text: 'Case Update'
-                  ),
-                  TextSpan(
-                    text: 'Case Update'
-                  )
-                  ])
-                )
-              ],),
-              )
+          Padding(
+            padding: EdgeInsets.only(top: 50),
+            child: Column(
+              children: <Widget>[
+                Text.rich(TextSpan(children: [
+                  TextSpan(text: 'Case Update\n'),
+                  TextSpan(text: 'Case Update')
+                ]))
+              ],
+            ),
+          )
         ],
       ),
     );
